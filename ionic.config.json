@@ -1,7 +1,8 @@
 {
   "name": "livesync2020",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
