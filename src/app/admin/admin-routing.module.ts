@@ -15,6 +15,10 @@ const routes: Routes = [
   {
     path: 'fans',
     loadChildren: () => import('./fans/fans.module').then( m => m.FansPageModule)
+  },
+  {
+    path: 'sets',
+    loadChildren: () => import('./sets/sets.module').then( m => m.SetsPageModule)
   }
 ];
 
