@@ -1,9 +1,56 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>events</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>events</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>Your Upcoming Event</ion-card-title>
+            <ion-card-subtitle></ion-card-subtitle>
+
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-label>Upload Your 1st Set Song</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-input type="file"></ion-input>
+                </ion-item>
+                <ion-item slot="end">
+                    <ion-label>Add Another Song</ion-label>
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </ion-item>
+                <ion-item>
+                    <ion-button expand="block" color="success">Save</ion-button>
+                </ion-item>
+            </ion-list>
+
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title></ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list>
+                <ion-item *ngFor="let fan of fanInfo">
+                <ion-thumbnail slot="start">
+                    <ion-img src="{{ fan.imgThumbnail }}"></ion-img>
+                </ion-thumbnail>
+                <ion-label>
+                    <h3>{{ fan.name }}</h3>
+                    <p>City: {{ fan.city }}</p>
+                    <p>Attending Event: {{ fan.attendingStatus }}</p>
+                    <p>Online: {{ fan.isOnline }}</p>
+                </ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
 
 </ion-content>

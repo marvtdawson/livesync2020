@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'events',
     loadChildren: () => import('./events/events.module').then( m => m.EventsPageModule)
+  },
+  {
+    path: 'fans',
+    loadChildren: () => import('./fans/fans.module').then( m => m.FansPageModule)
   }
 ];
 
