@@ -1,6 +1,6 @@
 {
-  "appId": "com.livesync2020",
-  "appName": "livesync2020",
+  "appId": "com.hgmlivesync2020",
+  "appName": "HGM LiveSync",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
