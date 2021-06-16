@@ -14,6 +14,22 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
+  },
+  {
+    path: 'footer',
+    loadChildren: () => import('./layout/footer/footer.module').then( m => m.FooterPageModule)
+  },
+  {
+    path: 'header',
+    loadChildren: () => import('./layout/header/header.module').then( m => m.HeaderPageModule)
+  },
+  {
+    path: 'footer',
+    loadChildren: () => import('./layout/footer/footer.module').then( m => m.FooterPageModule)
+  },
+  {
+    path: 'header',
+    loadChildren: () => import('./layout/header/header.module').then( m => m.HeaderPageModule)
   }
 ];
 

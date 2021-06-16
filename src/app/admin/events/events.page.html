@@ -1,56 +1,95 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-title>events</ion-title>
+
+    <ion-toolbar class="header">
+        <ion-buttons slot="start">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+
+        <ion-grid>
+            <ion-row>
+
+                <ion-col>
+                    <div class="header__menu-btn"></div>
+                </ion-col>
+
+                <ion-col size="2">
+                    <div class="header__logo-text-wrapper">
+                        <ion-title>
+
+                            <div class="header__logo-text-wrapper__logo">
+                                <a [routerLink]="['/home']">
+                                    <ion-img [src]="appLogo"
+                                             alt="We Care Moving Company Logo">
+                                    </ion-img>
+                                </a>
+                            </div>
+
+                            <div class="header__logo-text-wrapper__text">
+                                <a [routerLink]="['/home']">
+                                    {{ appName | uppercase }}
+                                </a>
+                            </div>
+
+                        </ion-title>
+                    </div>
+                </ion-col>
+
+                <ion-col size="4"></ion-col>
+
+                <ion-col size="5">
+                    <div class="header__nav-wrapper">
+                        <ul>
+                            <li>
+                                <a [routerLink]="['/services']">
+                                    <i class="fas fa-concierge-bell"></i>
+                                    Services |
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a [routerLink]="['/fleet']">
+                                    <i class="fas fa-truck-loading"></i>
+                                    Fleet |
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a [routerLink]="['/pricing']">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    Pricing |
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a [routerLink]="['/location']">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Location |
+                                </a>
+                            </li>
+
+                            <li>
+                                <a [routerLink]="['/cart']">
+                                    <i class="fas fa-cart-plus"></i>
+                                    Cart
+                                </a>
+                            </li>
+                            <li><a *ngIf="isUserLoggedOut$ | async" [routerLink]="['/register']">Sign Up |</a></li>
+                            <li><a *ngIf="isUserLoggedOut$ | async" [routerLink]="['/login']">
+                                <i class="fal fa-unlock"></i>
+                                Login</a></li>
+                            <li><a *ngIf="isUserLoggedIn$ | async" [routerLink]="['/admin']">{{displayName$ | async}}</a></li>
+                            <li><a *ngIf="isUserLoggedIn$ | async">| Logout</a></li>
+
+                            <!--
+
+                            -->
+                        </ul>
+                    </div>
+                </ion-col>
+
+            </ion-row>
+        </ion-grid>
     </ion-toolbar>
-</ion-header>
-
-<ion-content>
-    <ion-card>
-        <ion-card-header>
-            <ion-card-title>Your Upcoming Event</ion-card-title>
-            <ion-card-subtitle></ion-card-subtitle>
-
-        </ion-card-header>
-
-        <ion-card-content>
-            <ion-list>
-                <ion-item>
-                    <ion-label>Upload Your 1st Set Song</ion-label>
-                </ion-item>
-                <ion-item>
-                    <ion-input type="file"></ion-input>
-                </ion-item>
-                <ion-item slot="end">
-                    <ion-label>Add Another Song</ion-label>
-                    <ion-icon name="add-circle-outline"></ion-icon>
-                </ion-item>
-                <ion-item>
-                    <ion-button expand="block" color="success">Save</ion-button>
-                </ion-item>
-            </ion-list>
-
-        </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-        <ion-card-header>
-            <ion-card-title></ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            <ion-list>
-                <ion-item *ngFor="let fan of fanInfo">
-                <ion-thumbnail slot="start">
-                    <ion-img src="{{ fan.imgThumbnail }}"></ion-img>
-                </ion-thumbnail>
-                <ion-label>
-                    <h3>{{ fan.name }}</h3>
-                    <p>City: {{ fan.city }}</p>
-                    <p>Attending Event: {{ fan.attendingStatus }}</p>
-                    <p>Online: {{ fan.isOnline }}</p>
-                </ion-label>
-                </ion-item>
-            </ion-list>
-        </ion-card-content>
-    </ion-card>
-
-</ion-content>
