@@ -4,91 +4,78 @@ ion-header, ion-toolbar, ion-title {
   background: #ffffff;
 }
 
-.header {
-
-  --ion-background-color: #FFFFFF;
-
-  a {
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-
-
-  & ion-buttons {
+@media(min-width: 768px) {
+  .mobile-header {
     display: none;
+  }
 
-    // 320px to 375px
-    @media only screen and (min-width: $bp-smallest) and (max-width: $bp-smaller-1) {
+  .header {
+    display: flex;
+    background: #ffffff;
+    padding-left: 40px;
+    padding-right: 40px;
+
+
+    &__logo-text-wrapper {
+      display: inline;
+
+      &__logo {
+        width: 20%;
+        height: 20%;
+      }
+
+      &__text {
+        display: inline;
+        left: 100px;
+      }
+    }
+
+    &__nav-wrapper {
       display: block;
-      width: 60%;
-      margin: 0 0 0 1.9rem;
-      font-size: $bp-smallest-font-size;
+      right: 0.5rem;
+      position: absolute;
+      z-index: 10;
+      top: 1.8rem;
     }
-  }
-
-  &__logo-text-wrapper {
-    width: 45rem;
-    padding: 1rem;
-    float: left;
-    display: inline;
-
-    &__logo {
-      width: 7rem;
-      float: left;
-      display: inline;
-    }
-
-    &__text {
-      float: left;
-      margin-left: 0.8rem;
-      display: inline;
-      margin-top: 2.5rem;
-      font-size: $bp-medium-font-size;
-
-      // 320px to 375px
-      @media only screen and (min-width: $bp-smallest) and (max-width: $bp-smaller-1) {
-        display: none;
-      }
-
-    }
-
-  }
-
-  &__nav-wrapper {
-    display: inline;
-    float: left;
-    margin-top: 2.7rem;
-
-    & ul {
-      float: left;
-
-      & li {
-        list-style-type: none;
-        float: left;
-        padding: 3px;
-        font-size: 1.2rem;
-
-        & a {
-          text-decoration: none;
-          padding: 3px;
-
-          & ion-icon {
-            right: 1rem;
-          }
-        }
-      }
-    }
-
-    // 320px to 375px
-    @media only screen and (min-width: $bp-smallest) and (max-width: $bp-smaller-1) {
-      display: none;
-    }
-
   }
 }
 
-/*.button {
-  display: none;
-}*/
+@media(max-width: 768px) {
+  .mobile-header {
+    display: block;
+  }
+
+  .header {
+    display: none;
+  }
+}
+
+.active-item {
+  border-bottom: 2px solid var(--ion-color-primary);
+}
+
+.dropdown {
+  width: 7.2rem;
+  // height: 8rem;
+  background: #FFFFFF;
+  position: absolute;
+  top: 3.9rem;
+  left: 295px;
+  z-index: 1;
+  ion-item:hover {
+    --ion-item-color: var(--ion-color-primary);
+  }
+}
+
+.account-dropdown {
+  width: 7.2rem;
+  // height: 8rem;
+  background: #FFFFFF;
+  position: absolute;
+  top: 3.9rem;
+  left: 590px;
+  z-index: 1;
+  ion-item:hover {
+    --ion-item-color: var(--ion-color-primary);
+  }
+}

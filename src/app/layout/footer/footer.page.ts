@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SiteDataService} from "../../../services/site-data/site-data.service";
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterPage implements OnInit {
 
-  constructor() { }
+  siteName = this.siteData.siteName;
+  siteFooterName = this.siteData.siteFooterName;
+  constructor(private siteData: SiteDataService) { }
 
   ngOnInit() {
   }
