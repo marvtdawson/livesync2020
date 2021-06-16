@@ -6,7 +6,7 @@
     </ion-header>
     <ion-content>
         <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item button (click)="setTitle(item.title)"
+            <ion-item button (click)="setTitle(p.title)"
                       [routerLink]="[p.url]"
                       routerDirection="root"
                       routerLinkActive="active-item"
@@ -19,4 +19,5 @@
         </ion-menu-toggle>
     </ion-content>
 </ion-menu>
+<app-header></app-header>
 <ion-router-outlet id="main"></ion-router-outlet>

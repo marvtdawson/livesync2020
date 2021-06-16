@@ -5,3 +5,16 @@
     color: var(--ion-color-primary);
   }
 }
+
+
+@media(min-width: 768px) {
+  ion-router-outlet {
+    margin-top: 63px;
+  }
+}
+
+@media(max-width: 768px) {
+  ion-router-outlet {
+    margin-top: 56px;
+  }
+}
