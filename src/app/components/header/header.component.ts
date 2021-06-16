@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
 import {SiteDataService} from "../../../services/site-data/site-data.service";
 
@@ -8,6 +8,8 @@ import {SiteDataService} from "../../../services/site-data/site-data.service";
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+
+  @Input()pageTitle: string;
 
   appName = this.siteData.siteName;
   appLogo = this.siteData.siteLogo;
