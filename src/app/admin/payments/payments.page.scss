@@ -1,0 +1,17 @@
+.credit-card-logo {
+  width: 288px;
+  height: 186px;
+}
+.credit-card-name {
+  font-size: 1.8rem;
+}
+
+.credit-card-edit-option {
+  width: 165px;
+  margin: auto;
+  text-align: center;
+
+  & a {
+    text-decoration: none;
+  }
+}
