@@ -17,6 +17,7 @@
 //@import 'components/composition';
 
 // layout
+@import 'layout/default-page';
 // @import 'layout/header';
 // @import 'layout/footer';
 // @import 'layout/forms';
@@ -27,11 +28,11 @@
 //@import 'layout/gallery';
 
 // pages
-//@import 'pages/home';
-//@import 'pages/core-pages';
-//@import 'pages/admin';
-//@import 'pages/request-service';
-//@import 'pages/landing-page';
+@import 'pages/home';
+@import 'pages/admin';
+@import 'pages/default';
+@import 'pages/request-service';
+@import 'pages/landing-page';
 
 // vendors
 // @import "vendors";

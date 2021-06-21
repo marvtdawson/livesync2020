@@ -1,0 +1,156 @@
+@import 'src/styles/base/base';
+
+.admin-user {
+
+  &__sidenav {
+    width: 16% !important;
+    padding: 5px;
+    border-right: 1px solid green;
+    margin-top: 0.5rem;
+    text-align: center;
+
+    @media only screen and (min-width: $bp-medium-small) and (max-width: $bp-medium) {
+      width: 10% !important;
+    }
+
+    @media only screen and (min-width: $bp-smallest) and (max-width: $bp-small) {
+      width: 20% !important;
+    }
+
+    &__admin-logo {
+      margin: 0 auto 1.5rem;
+      align-items: center;
+
+      &__img {
+        width: 100%;
+      }
+    }
+
+    &__btn-container {
+      margin-bottom: 1rem;
+      align-content: center;
+      // text-align: center;
+      vertical-align: center;
+
+      //& :hover {
+      //  background-color: #0c5460;
+      //  color: white;
+      //}
+
+      &__icon {
+        width: 25%;
+      }
+
+      &__title {
+        margin: 0.2rem 0 0 0.5rem;
+        //text-align: right;
+        //justify-content: right;
+        //position: absolute;
+
+        @media only screen and (min-width: $bp-smallest) and (max-width: $bp-medium) {
+          margin: 0;
+          display: none;
+          visibility: hidden;
+        }
+
+        & a:hover {
+          text-decoration: none;
+        }
+      }
+
+      & a {
+
+        font-size: 0.9rem;
+
+        @media only screen and (min-width: $bp-smallest) and (max-width: $bp-medium) {
+          font-size: 0.4rem;
+        }
+
+
+      }
+    }
+  }
+
+
+  &__content {
+    width: 100%;
+    float: left;
+    left: 0.5%;
+    position: relative;
+    // border: 1px solid orange;
+    align-content: center;
+
+    &__row-1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      &__admin-header {
+
+        &--col-1 {
+          display: inline-block;
+
+          @media only screen and (max-width: $bp-medium) {
+            width: 100%;
+          }
+
+          &__icon {
+            display: block;
+            position: relative;
+            z-index: 1000;
+            margin-top: 1rem;
+            font-size: 5rem;
+          }
+          &__far {
+            margin-top: -10rem;
+            position: relative;
+            z-index: 1000;
+          }
+        }
+
+        &--col-2 {
+          display: inline-block;
+          text-align: left;
+          position: relative;
+          left: 1rem;
+
+          @media only screen and (max-width: $bp-medium) {
+            display: none;
+          }
+        }
+
+        &--col-3 {
+          display: inline-block;
+          text-align: left;
+
+          @media only screen and (max-width: $bp-medium) {
+            display: none;
+          }
+        }
+
+      }
+
+    }
+
+    &__row-2 {
+
+      &__column {
+        min-height: 40rem;
+
+        & ion-content {
+          top: 2rem;
+        }
+      }
+    }
+  }
+
+}
+
+.main-content {
+  min-height: 40rem;
+
+  @media only screen and (min-width: $bp-large) {
+    min-height: 46rem;
+  }
+
+
+}
