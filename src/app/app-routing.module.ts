@@ -15,7 +15,7 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
-  {
+  /*{
     path: 'footer',
     loadChildren: () => import('./layout/footer/footer.module').then( m => m.FooterPageModule)
   },
@@ -30,7 +30,7 @@ const routes: Routes = [
   {
     path: 'header',
     loadChildren: () => import('./layout/header/header.module').then( m => m.HeaderPageModule)
-  }
+  }*/
 ];
 
 @NgModule({
