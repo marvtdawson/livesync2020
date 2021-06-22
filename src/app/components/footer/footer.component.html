@@ -1,25 +1,30 @@
 <!-- START FOOTER CONTAINER -->
 <ion-footer class="mobile-footer">
   <ion-toolbar>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-icon name="home"></ion-icon>
-        </ion-col>
-        <ion-col>
-          <ion-icon name="mic"></ion-icon>
-        </ion-col>
-        <ion-col>
-          <ion-icon name="play"></ion-icon>
-        </ion-col>
-        <ion-col>
-          <ion-icon name="person-circle"></ion-icon>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
 
+      <ion-tab-button tab="performances">
+        <ion-icon name="play"></ion-icon>
+        <ion-label>Performances</ion-label>
+        <ion-badge>9</ion-badge>
+      </ion-tab-button>
+
+      <ion-tab-button tab="events">
+        <ion-icon name="mic"></ion-icon>
+        <ion-label>Events</ion-label>
+        <ion-badge>9</ion-badge>
+      </ion-tab-button>
+
+      <ion-tab-button tab="admin">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Account</ion-label>
+        <ion-badge>2</ion-badge>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
   </ion-toolbar>
-
 </ion-footer>
 
 

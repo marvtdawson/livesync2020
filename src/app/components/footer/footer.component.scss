@@ -36,10 +36,15 @@
   }
 }
 
+// Mobile
 @media(max-width: 768px) {
   .mobile-footer {
     display: block;
-    align-items: center;
+
+    & ion-col {
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   .footer {

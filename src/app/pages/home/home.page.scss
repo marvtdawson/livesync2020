@@ -1,3 +1,11 @@
-.main-card {
-  min-height: 690px;
+@media(min-width: 768px) {
+  .main-card {
+    min-height: 690px;
+  }
+}
+
+@media(max-width: 768px) {
+  .main-card {
+    min-height: 415px;
+  }
 }
