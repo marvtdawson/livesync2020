@@ -1,5 +1,29 @@
 <!-- START FOOTER CONTAINER -->
-<ion-footer >
+<ion-footer class="mobile-footer">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-icon name="home"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <ion-icon name="mic"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <ion-icon name="play"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <ion-icon name="person-circle"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+
+</ion-footer>
+
+
+<ion-footer>
   <ion-toolbar class="footer">
     <!--ion-grid class="footer"-->
     <ion-grid>
@@ -100,11 +124,11 @@
               <div class="footer__wrapper__nav-subdiv__subdiv-3">
                 <ion-item lines="none">
                   <ion-label>
-                    We Care How You Move!
+                    Subscribe and save 10% off!
                   </ion-label>
                 </ion-item>
                 <ion-item lines="none">
-                  <ion-button size="large" class="quote-btn" (click)="getQuoteForm()">Get Quote</ion-button>
+                  <ion-button size="large" class="quote-btn" (click)="subscribe()">Subscribe</ion-button>
                   <!--button class="footer__wrapper__nav-subdiv__btn" (click)="getQuoteForm()">Get Quote
                   </button-->
                 </ion-item>
