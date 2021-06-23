@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoutPage implements OnInit {
 
+  pageTitle = 'Logout Page';
   constructor() { }
 
   ngOnInit() {

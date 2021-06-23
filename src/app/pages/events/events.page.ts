@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsPage implements OnInit {
 
+  pageTitle = 'Events';
   constructor() { }
 
   ngOnInit() {

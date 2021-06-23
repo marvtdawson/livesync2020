@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { CartPageRoutingModule } from './cart-routing.module';
 
 import { CartPage } from './cart.page';
+import {SharedComponentsModule} from "../../components/shared-components.module";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    CartPageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        CartPageRoutingModule,
+        SharedComponentsModule
+    ],
   declarations: [CartPage]
 })
 export class CartPageModule {}

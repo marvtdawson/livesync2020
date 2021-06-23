@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { PerformancesPageRoutingModule } from './performances-routing.module';
 
 import { PerformancesPage } from './performances.page';
+import {SharedComponentsModule} from "../../components/shared-components.module";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    PerformancesPageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        PerformancesPageRoutingModule,
+        SharedComponentsModule
+    ],
   declarations: [PerformancesPage]
 })
 export class PerformancesPageModule {}

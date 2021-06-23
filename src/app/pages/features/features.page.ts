@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeaturesPage implements OnInit {
 
+  pageTitle = 'Feature Page';
   constructor() { }
 
   ngOnInit() {

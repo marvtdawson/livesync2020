@@ -53,6 +53,10 @@ const routes: Routes = [
         loadChildren: () => import('../../admin/admin.module').then( m => m.AdminPageModule)
       },
       {
+        path: 'tabs',
+        loadChildren: () => import('../tabs/tabs.module').then( m => m.TabsPageModule)
+      },
+      {
         path: 'page-not-found',
         loadChildren: () => import('../page-not-found/page-not-found.module').then( m => m.PageNotFoundPageModule)
       },
