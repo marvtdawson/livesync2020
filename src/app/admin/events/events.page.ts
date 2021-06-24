@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsPage implements OnInit {
 
+  pageTitle = 'Events Page';
   fanImage1 = '../assets/img/admin/fans/employee_1.jpg';
   fanImage2 = '../assets/img/admin/fans/employee_2.jpg';
   fanImage3 = '../assets/img/admin/fans/employee_5.jpg';
