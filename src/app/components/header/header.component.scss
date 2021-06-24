@@ -44,6 +44,10 @@ ion-header, ion-toolbar, ion-title {
   .mobile-header {
     display: block;
     max-height: 84px;
+
+    & ion-toolbar {
+      --ion-border-color: none;
+    }
   }
 
   .header {

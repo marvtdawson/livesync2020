@@ -18,7 +18,12 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(() => {
       if(Capacitor.isPluginAvailable('SplashScreen')) {
-        Plugins.SplashScreen.hide().then();
+        Plugins.SplashScreen.show(
+            {
+              showDuration: 2000,
+              autoHide: true
+            }
+        ).then();
       }
     });
   }
