@@ -1,12 +1,12 @@
 @import 'src/styles/base/_base.scss';
 
 ion-header, ion-toolbar, ion-title {
-  background-color: #FADF59;
+  background-color: #FFffff;
 }
 
 ion-header {
 
-  background-color: #FADF59;
+  background-color: #FFffff;
   padding: 1rem;
   min-height: 3rem;
 
@@ -20,7 +20,7 @@ ion-header {
 ion-toolbar {
     width: 90%;
     margin: 0 auto;
-    background-color: #FADF59;
+    background-color: #FFffff;
 
     // 1024px
     @media only screen and (max-width: $bp-larger-1024) {
@@ -33,7 +33,7 @@ ion-toolbar {
 
     & ion-buttons {
 
-      background-color: #FADF59;
+      background-color: #FFffff;
 
       @media only screen and (max-width: $bp-medium) {
         display: block;
@@ -56,7 +56,7 @@ ion-toolbar {
     & ion-title {
 
       width: auto;
-      background-color: #FADF59;
+      background-color: #fff;
 
       .title-wrapper {
         width: 27%;

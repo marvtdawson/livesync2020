@@ -43,6 +43,7 @@ ion-header, ion-toolbar, ion-title {
 @media(max-width: 768px) {
   .mobile-header {
     display: block;
+    max-height: 84px;
   }
 
   .header {
