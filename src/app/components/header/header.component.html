@@ -58,14 +58,14 @@
 
     <div *ngIf="dropdown" class="dropdown" (mouseleave)="dropdown = false" #dropdownbox >
       <ion-item button (click)="dropdown = false" [routerLink]="['/products']"
-                [queryParams]="{ category: 'previous'}"
-                lines="none" >
-        Previous
-      </ion-item>
-      <ion-item button (click)="dropdown = false" [routerLink]="['/products']"
                 [queryParams]="{ category: 'new'}"
                 lines="none" >
         New
+      </ion-item>
+      <ion-item button (click)="dropdown = false" [routerLink]="['/products']"
+                [queryParams]="{ category: 'previous'}"
+                lines="none" >
+        Previous
       </ion-item>
     </div>
 

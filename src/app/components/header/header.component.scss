@@ -17,16 +17,24 @@ ion-header, ion-toolbar, ion-title {
 
 
     &__logo-text-wrapper {
-      display: inline;
+      display: flex;
 
       &__logo {
         width: 20%;
         height: 20%;
+        float: left;
       }
 
       &__text {
-        display: inline;
         left: 100px;
+        float: left;
+        margin-top: 20px;
+        margin-left: 7px;
+
+
+        & a {
+          text-decoration: none;
+        }
       }
     }
 
@@ -60,12 +68,12 @@ ion-header, ion-toolbar, ion-title {
 }
 
 .dropdown {
-  width: 7.2rem;
+  // width: 7.2rem;
   // height: 8rem;
   background: #FFFFFF;
   position: absolute;
   top: 3.9rem;
-  left: 295px;
+  left: 275px;
   z-index: 1;
   ion-item:hover {
     --ion-item-color: var(--ion-color-primary);
@@ -73,12 +81,12 @@ ion-header, ion-toolbar, ion-title {
 }
 
 .account-dropdown {
-  width: 7.2rem;
+  // width: 7.2rem;
   // height: 8rem;
   background: #FFFFFF;
   position: absolute;
   top: 3.9rem;
-  left: 590px;
+  left: 560px;
   z-index: 1;
   ion-item:hover {
     --ion-item-color: var(--ion-color-primary);
