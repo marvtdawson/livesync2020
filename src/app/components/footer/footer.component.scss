@@ -12,26 +12,46 @@
     padding-right: 40px;
 
 
-    &__logo-text-wrapper {
-      display: inline;
+    &__signup {
+      display: flex;
 
-      &__logo {
-        width: 20%;
-        height: 20%;
+      &__div-1 {
+        float: left;
       }
 
-      &__text {
-        display: inline;
-        left: 100px;
+      &__div-2 {
+        float: left;
+        margin-left: 20px;
       }
+
     }
 
-    &__nav-wrapper {
-      display: block;
-      right: 0.5rem;
-      position: absolute;
-      z-index: 10;
-      top: 1.8rem;
+    &__social {
+      display: flex;
+
+      &__div-1 {
+        display: flex;
+        float: left;
+        margin-top: 10px;
+      }
+
+      &__div-2 {
+        display: flex;
+        float: left;
+
+        & a {
+          text-decoration: none;
+
+          & .fab {
+            margin-left: 20px;
+          }
+        }
+
+        & a {
+
+        }
+      }
+
     }
   }
 }
