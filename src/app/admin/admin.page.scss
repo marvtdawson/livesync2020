@@ -1,0 +1,18 @@
+ion-list {
+  padding: 2rem 0;
+}
+
+#inbox-list {
+  padding: 1.5rem;
+  font-size: 22px;
+  font-weight: 600;
+  min-height: 20px;
+
+  ion-list-header, ion-note {
+    padding-left: 2rem;
+  }
+
+  ion-note {
+    margin-bottom: 3rem;
+  }
+}

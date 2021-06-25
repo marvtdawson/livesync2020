@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SetsPage implements OnInit {
 
-  pageTitle = 'Sets Page';
+  pageTitle = 'Admin Sets Page';
   constructor() { }
 
   ngOnInit() {
