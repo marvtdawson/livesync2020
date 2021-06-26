@@ -22,6 +22,14 @@ const routes: Routes = [
   {
     path: 'subscribe',
     loadChildren: () => import('./pages/subscribe/subscribe.module').then( m => m.SubscribePageModule)
+  },
+  {
+    path: 'privacy',
+    loadChildren: () => import('./pages/privacy/privacy.module').then( m => m.PrivacyPageModule)
+  },
+  {
+    path: 'terms-of-service',
+    loadChildren: () => import('./pages/terms-of-service/terms-of-service.module').then( m => m.TermsOfServicePageModule)
   }
 ];
 
