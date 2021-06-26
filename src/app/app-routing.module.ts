@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     loadChildren: () => import('./pages/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+  },
+  {
+    path: 'subscribe',
+    loadChildren: () => import('./pages/subscribe/subscribe.module').then( m => m.SubscribePageModule)
   }
 ];
 
