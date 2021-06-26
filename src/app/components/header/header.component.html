@@ -55,16 +55,15 @@
       Events
       <ion-icon slot="end" [name]="dropdown ? 'chevron-down' : 'chevron-up'"></ion-icon>
     </ion-button>
-
     <div *ngIf="dropdown" class="dropdown" (mouseleave)="dropdown = false" #dropdownbox >
-      <ion-item button (click)="dropdown = false" [routerLink]="['/products']"
+      <ion-item button (click)="dropdown = false" [routerLink]="['/events']"
                 [queryParams]="{ category: 'new'}"
-                lines="none" >
+                lines="none" routerDirection="root" >
         New
       </ion-item>
-      <ion-item button (click)="dropdown = false" [routerLink]="['/products']"
+      <ion-item button (click)="dropdown = false" [routerLink]="['/events']"
                 [queryParams]="{ category: 'previous'}"
-                lines="none" >
+                lines="none" routerDirection="root" >
         Previous
       </ion-item>
     </div>
@@ -77,8 +76,9 @@
                 [routerLinkActiveOptions]="{exact: true}">Cart</ion-button>
 
     <ion-button fill="clear" color="dark" [routerLink]="['/admin']"
-                #accountBtn (mouseenter)="accountDropDown=true" (mouseleave)="hideAccountDropdown($event)"
+                #accountBtn (mouseenter)="accountDropDown=true" (mouseleave)="hideDropdown($event)"
                 routerLinkActive="active-item"
+                routerDirection="root"
                 [routerLinkActiveOptions]="{exact: true}">
       Account
       <ion-icon slot="end" [name]="accountDropDown ? 'chevron-down' : 'chevron-up'"></ion-icon>
@@ -86,14 +86,14 @@
     <div *ngIf="accountDropDown" class="account-dropdown"
          (mouseleave)="accountDropDown = false"
          #accountdropdownbox >
-      <ion-item button (click)="accountDropDown = false" [routerLink]="['/admin']"
+      <ion-item button (click)="accountDropDown = false" [routerLink]="['/login']"
                 [queryParams]="{ category: 'login'}"
-                lines="none" >
+                lines="none" routerDirection="root" >
         Login
       </ion-item>
-      <ion-item button (click)="accountDropDown = false" [routerLink]="['/admin']"
+      <ion-item button (click)="accountDropDown = false" [routerLink]="['/logout']"
                 [queryParams]="{ category: 'logout'}"
-                lines="none" >
+                lines="none" routerDirection="root" >
         Logout
       </ion-item>
     </div>

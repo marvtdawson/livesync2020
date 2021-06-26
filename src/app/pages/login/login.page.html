@@ -1,10 +1,17 @@
+<!-- display page content -->
 <ion-content>
-  <ion-card class="main-card">
+  <ion-card class="form main-content"><!-- display page content -->
+
+    <ion-card-header>
+      <ion-card-title>{{ pageTitle | uppercase}}</ion-card-title>
+    </ion-card-header>
+
     <ion-card-content>
-      <ion-card-header>
-        <ion-card-title>{{ pageTitle }}</ion-card-title>
-      </ion-card-header>
+      <div id="firebaseui-auth-container" class="auth-container"></div>
     </ion-card-content>
   </ion-card>
+
+  <!-- display page footer -->
   <app-footer></app-footer>
+
 </ion-content>

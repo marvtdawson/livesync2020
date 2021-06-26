@@ -4,16 +4,17 @@ import {HeaderComponent} from "./header/header.component";
 import {IonicModule} from "@ionic/angular";
 import {RouterModule} from "@angular/router";
 import {FooterComponent} from "./footer/footer.component";
+import {ExpandableComponent} from "./expandable/expandable.component";
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent],
+  declarations: [HeaderComponent, FooterComponent, ExpandableComponent],
   imports: [
     CommonModule,
     IonicModule,
     RouterModule
   ],
-  exports: [HeaderComponent, FooterComponent]
+  exports: [HeaderComponent, FooterComponent, ExpandableComponent]
 })
 export class SharedComponentsModule { }

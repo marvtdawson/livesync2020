@@ -1,0 +1,53 @@
+@import '/src/styles/base/base';
+.form {
+  display: grid;
+  width: 30%;
+  margin: 3rem auto;
+
+  @media only screen and (max-width: $bp-largest-plus )  {
+    width: 50%;
+  }
+
+  @media only screen and (max-width: $bp-medium )  {
+    width: 100%;
+  }
+
+  &__ssc-btn-wrapper {
+
+  }
+
+  &__or-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #6D5D4B;
+    padding: 1.5rem;
+
+    &::before,
+    &::after {
+      content: "";
+      height: 1px;
+      display: block;
+      background-color: currentColor;
+    }
+  }
+
+  &__btn-wrapper {
+    margin: 2.5rem auto;
+  }
+
+  &__user {
+    padding: 1.5rem;
+  }
+
+  &__submit-btn {
+    padding: 1.5rem;
+  }
+
+  &__error {
+    color: red;
+  }
+
+}

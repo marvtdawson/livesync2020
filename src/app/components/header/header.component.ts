@@ -10,8 +10,8 @@ import {SiteDataService} from "../../../services/site-data/site-data.service";
 export class HeaderComponent implements OnInit {
 
   @Input()pageTitle: string;
-  dropdown = true;
-  accountDropDown = true;
+  dropdown = false;
+  accountDropDown = false;
   appName = this.siteData.siteName;
   appLogo = this.siteData.siteLogo;
   isUserLoggedOut$: Observable<boolean>;
@@ -26,12 +26,17 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {}
 
   hideDropdown(event) {
-    const xTouch = (event.clientX).toFixed(2);
-    const yTouch = (event.clientY).toFixed(2);
+    const xTouch = event.clientX;
+    const yTouch = event.clientY;
 
     const rect = this.eventBtn.nativeElement.getBoundingClientRect();
-  }
+    const topBoundary = rect.top + 2;
+    const leftBoundary = rect.top + 2;
+    const rightBoundary = rect.top + 2;
 
-  hideAccountDropdown(event) {}
+    if(xTouch < leftBoundary || xTouch > rightBoundary || yTouch < topBoundary) {
+      this.dropdown = false;
+    }
+  }
 
 }
