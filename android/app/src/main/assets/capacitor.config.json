@@ -4,6 +4,7 @@
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
+  "showSpinner": true,
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 0
