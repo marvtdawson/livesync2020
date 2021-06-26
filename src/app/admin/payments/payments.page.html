@@ -1,29 +1,33 @@
 <ion-content fullscreen>
-  <ion-card class="main-content" *ngFor="let p of paymentCompanies">
-    <ion-list>
-      <ion-item lines="none">
-        <ion-label>{{ p.cardCompanyInfo }} </ion-label>
-        <ion-toggle slot="end" name="blueberry" unchecked color="primary"></ion-toggle>
-      </ion-item>
-    </ion-list>
-    <img class="credit-card-logo" src="{{ p.imageUrl }}" alt="{{ p.companyName }} Logo">
-    <ion-card-header>
-      <ion-card-subtitle>{{ p.paymentType }}</ion-card-subtitle>
-      <ion-card-title class="credit-card-name">{{ p.companyName }}</ion-card-title>
-    </ion-card-header>
+  <ion-card>
     <ion-card-content>
-      <p>
-        <a href="{{ p.companyURL }}">Learn more</a> about {{ p.companyName }} credit card processing.
-      </p>
-      <ion-list>
-        <ion-item lines="none">
-          <div class="credit-card-edit-option">
-            <a href="{{ p.linkUrl }}">
-              Edit Payment Options
-            </a>
-          </div>
-        </ion-item>
-      </ion-list>
+      <ion-card class="main-content" *ngFor="let p of paymentCompanies">
+        <ion-list>
+          <ion-item lines="none">
+            <ion-label>{{ p.cardCompanyInfo }} </ion-label>
+            <ion-toggle slot="end" name="blueberry" unchecked color="primary"></ion-toggle>
+          </ion-item>
+        </ion-list>
+        <img class="credit-card-logo" src="{{ p.imageUrl }}" alt="{{ p.companyName }} Logo">
+        <ion-card-header>
+          <ion-card-subtitle>{{ p.paymentType }}</ion-card-subtitle>
+          <ion-card-title class="credit-card-name">{{ p.companyName }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>
+            <a href="{{ p.companyURL }}">Learn more</a> about {{ p.companyName }} credit card processing.
+          </p>
+          <ion-list>
+            <ion-item lines="none">
+              <div class="credit-card-edit-option">
+                <a href="{{ p.linkUrl }}">
+                  Edit Payment Options
+                </a>
+              </div>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
     </ion-card-content>
   </ion-card>
 </ion-content>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminPage } from './admin.page';
+// import {PaymentsPage} from "./payments/payments.page";
 
 const routes: Routes = [
   {
@@ -22,7 +23,34 @@ const routes: Routes = [
       },
       {
         path: 'payments',
-        loadChildren: () => import('./payments/payments.module').then( m => m.PaymentsPageModule)
+        // component: PaymentsPage,
+        loadChildren: () => import('./payments/payments.module').then( m => m.PaymentsPageModule),
+        children: [
+          {
+            path: 'mastercard',
+            loadChildren: () => import('../admin/payments/mastercard/mastercard.module').then( m => m.MastercardPageModule)
+          },
+          {
+            path: 'visa',
+            loadChildren: () => import('../admin/payments/visa/visa.module').then( m => m.VisaPageModule)
+          },
+          {
+            path: 'stripe',
+            loadChildren: () => import('../admin/payments/stripe/stripe.module').then( m => m.StripePageModule)
+          },
+          {
+            path: 'pay-pal',
+            loadChildren: () => import('../admin/payments/pay-pal/pay-pal.module').then( m => m.PayPalPageModule)
+          },
+          {
+            path: 'apple-pay',
+            loadChildren: () => import('../admin/payments/apple-pay/apple-pay.module').then( m => m.ApplePayPageModule)
+          },
+          {
+            path: 'google-pay',
+            loadChildren: () => import('../admin/payments/google-pay/google-pay.module').then( m => m.GooglePayPageModule)
+          }
+        ]
       },
       {
         path: 'performances',
