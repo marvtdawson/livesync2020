@@ -4,6 +4,38 @@
       <ion-card-header>
         <ion-card-title>{{ pageTitle }}</ion-card-title>
       </ion-card-header>
+      <ion-list>
+        <ion-item *ngFor="let fan of fans">
+          <ion-item-sliding>
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-img src="{{ fan.imgThumbnail }}" alt=""></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <div class="employee-title-content">
+                  <h2>{{ fan.name }}</h2>
+                  <p>{{ fan.title }}</p>
+                </div>
+              </ion-label>
+              <ion-avatar slot="end">
+                <i class="far fa-eye fa-1x" *ngIf="fan.isOnline"></i>
+                <i class="far fa-eye-slash fa-1x" *ngIf="!fan.isOnline"></i>
+              </ion-avatar>
+            </ion-item>
+            <ion-item-options side="start">
+              <ion-item-option color="danger">
+                Call
+              </ion-item-option>
+            </ion-item-options>
+            <ion-item-options side="end">
+              <ion-item-option color="secondary"><i class="fas fa-sms fa-1x"></i> Message
+              </ion-item-option>
+              <ion-item-option color="primary"><i class="fas fa-tasks fa-1x"></i> Tasks
+              </ion-item-option>
+            </ion-item-options>
+          </ion-item-sliding>
+        </ion-item>
+      </ion-list>
     </ion-card-content>
   </ion-card>
 </ion-content>
