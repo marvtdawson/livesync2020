@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FansPage implements OnInit {
 
-  pageTitle = 'Admin Fans Page';
+  pageTitle = 'Fans Page';
   fans = [
     {'name': 'Chantel', 'title': 'Property Manager', 'imgThumbnail': '/assets/img/admin/fans/employee_9.jpg', 'isOnline': true},
     {
