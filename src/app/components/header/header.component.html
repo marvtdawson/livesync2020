@@ -4,6 +4,15 @@
       <ion-menu-button menu="myMenu"></ion-menu-button>
     </ion-buttons>
     <ion-title>{{ pageTitle }}</ion-title>
+    <ion-buttons>
+      <ion-button>
+        <a [routerLink]="['/home']">
+          <ion-img class="mobile-header__logo-img" [src]="appLogo"
+                   alt="Live Sync Logo">
+          </ion-img>
+        </a>
+      </ion-button>
+    </ion-buttons>
     <ion-buttons slot="end">
       <ion-button>
         <a [routerLink]="['/admin']" routerLinkActive="active-item" [routerLinkActiveOptions]="{exact: true}">

@@ -57,6 +57,20 @@ ion-header, ion-toolbar, ion-title {
     & ion-toolbar {
       --ion-border-color: none;
     }
+
+    & ion-button {
+      height: 65px;
+
+      & ion-icon {
+        color: #9a9a9a;
+        opacity: 0.5;
+      }
+    }
+      &__logo-img {
+        margin: 0 auto;
+        width: 24%;
+      }
+
   }
 
   .header {
