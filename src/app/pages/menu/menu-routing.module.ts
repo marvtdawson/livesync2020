@@ -57,6 +57,10 @@ const routes: Routes = [
         loadChildren: () => import('../terms-of-service/terms-of-service.module').then( m => m.TermsOfServicePageModule)
       },
       {
+        path: 'mobile-app',
+        loadChildren: () => import('../mobile-app/mobile-app.module').then( m => m.MobileAppPageModule)
+      },
+      {
         path: 'sitemap',
         loadChildren: () => import('../sitemap/sitemap.module').then( m => m.SitemapPageModule)
       },

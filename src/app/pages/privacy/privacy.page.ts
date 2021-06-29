@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrivacyPage implements OnInit {
 
+  pageTitle = 'Private Policy';
   constructor() { }
 
   ngOnInit() {

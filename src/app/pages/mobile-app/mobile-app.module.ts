@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PrivacyPageRoutingModule } from './privacy-routing.module';
+import { MobileAppPageRoutingModule } from './mobile-app-routing.module';
 
-import { PrivacyPage } from './privacy.page';
+import { MobileAppPage } from './mobile-app.page';
 import {SharedComponentsModule} from "../../components/shared-components.module";
 
 @NgModule({
@@ -14,9 +14,9 @@ import {SharedComponentsModule} from "../../components/shared-components.module"
         CommonModule,
         FormsModule,
         IonicModule,
-        PrivacyPageRoutingModule,
+        MobileAppPageRoutingModule,
         SharedComponentsModule
     ],
-  declarations: [PrivacyPage]
+  declarations: [MobileAppPage]
 })
-export class PrivacyPageModule {}
+export class MobileAppPageModule {}

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubscribePage implements OnInit {
 
+  pageTitle = 'Subscribe Page';
   constructor() { }
 
   ngOnInit() {

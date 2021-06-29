@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SitePage implements OnInit {
 
+  pageTitle = 'Site Pages';
   constructor() { }
 
   ngOnInit() {

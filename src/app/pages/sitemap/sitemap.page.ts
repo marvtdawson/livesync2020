@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SitemapPage implements OnInit {
 
+  pageTitle = 'SiteMap';
   constructor() { }
 
   ngOnInit() {
