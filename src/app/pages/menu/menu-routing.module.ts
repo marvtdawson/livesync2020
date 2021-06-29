@@ -41,6 +41,26 @@ const routes: Routes = [
         loadChildren: () => import('../pricing/pricing.module').then( m => m.PricingPageModule)
       },
       {
+        path: 'forgot-password',
+        loadChildren: () => import('../forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+      },
+      {
+        path: 'subscribe',
+        loadChildren: () => import('../subscribe/subscribe.module').then( m => m.SubscribePageModule)
+      },
+      {
+        path: 'privacy',
+        loadChildren: () => import('../privacy/privacy.module').then( m => m.PrivacyPageModule)
+      },
+      {
+        path: 'terms-conditions',
+        loadChildren: () => import('../terms-of-service/terms-of-service.module').then( m => m.TermsOfServicePageModule)
+      },
+      {
+        path: 'sitemap',
+        loadChildren: () => import('../sitemap/sitemap.module').then( m => m.SitemapPageModule)
+      },
+      {
         path: 'login',
         loadChildren: () => import('../login/login.module').then( m => m.LoginPageModule)
       },

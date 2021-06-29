@@ -62,6 +62,10 @@ const routes: Routes = [
       },
     ]
   },
+  {
+    path: 'site',
+    loadChildren: () => import('./site/site.module').then( m => m.SitePageModule)
+  },
 
 
 ];

@@ -37,6 +37,11 @@ export class AdminPage implements OnInit {
       icon: 'card'
     },
     {
+      title: 'Site',
+      url: '/admin/site',
+      icon: 'business'
+    },
+    {
       title: 'Account',
       url: '/admin/account',
       icon: 'settings'
