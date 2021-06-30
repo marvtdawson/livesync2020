@@ -57,17 +57,15 @@ const routes: Routes = [
         loadChildren: () => import('./performances/performances.module').then( m => m.PerformancesPageModule)
       },
       {
+        path: 'site-pages',
+        loadChildren: () => import('./site/site.module').then( m => m.SitePageModule)
+      },
+      {
         path: 'account',
         loadChildren: () => import('./account/account.module').then( m => m.AccountPageModule)
       },
     ]
-  },
-  {
-    path: 'site',
-    loadChildren: () => import('./site/site.module').then( m => m.SitePageModule)
-  },
-
-
+  }
 ];
 
 @NgModule({

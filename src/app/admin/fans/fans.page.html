@@ -1,9 +1,22 @@
 <ion-content>
   <ion-card class="main-card">
-    <ion-card-content>
       <ion-card-header>
         <ion-card-title>{{ pageTitle }}</ion-card-title>
       </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row class="add-edit-minus">
+          <ion-col >
+            <a (click)="onAddNewFan()">
+              <i class="fas fa-user-plus fa-5x" title="Add Employee"></i>
+            </a>
+          </ion-col>
+          <ion-col>
+            <a (click)="onDeleteFan()">
+              <i class="fas fa-user-minus fa-5x" title="Remove Employee"></i>
+            </a>
+          </ion-col>
+        </ion-row>
       <ion-list>
         <ion-item *ngFor="let fan of fans">
           <ion-item-sliding>
@@ -36,6 +49,7 @@
           </ion-item-sliding>
         </ion-item>
       </ion-list>
+      </ion-grid>
     </ion-card-content>
   </ion-card>
 </ion-content>

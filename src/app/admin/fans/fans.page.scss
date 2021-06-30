@@ -1,0 +1,20 @@
+@import "src/styles/base/base";
+
+
+.add-edit-minus {
+
+  margin: 0 auto;
+
+  & .fas {
+
+    margin-bottom: 1rem;
+
+    @media only screen and (min-width: $bp-smallest) and (max-width: $bp-medium) {
+      font-size: 3rem;
+    }
+  }
+
+  & .fa-user-plus {color: #0303a7;}
+  & .fa-user-minus {color: red;}
+
+}

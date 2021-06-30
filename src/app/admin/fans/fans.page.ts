@@ -38,4 +38,9 @@ export class FansPage implements OnInit {
   ngOnInit() {
   }
 
+  onAddNewFan() {}
+
+  onDeleteFan() {}
+
+
 }

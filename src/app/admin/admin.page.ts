@@ -24,22 +24,22 @@ export class AdminPage implements OnInit {
     {
       title: 'Sets',
       url: '/admin/sets',
-      icon: 'list'
+      icon: 'musical-notes'
     },
     {
       title: 'Fans',
       url: '/admin/fans',
-      icon: 'image'
+      icon: 'people'
+    },
+    {
+      title: 'Site Pages',
+      url: '/admin/site-pages',
+      icon: 'documents'
     },
     {
       title: 'Payment Options',
       url: '/admin/payments',
       icon: 'card'
-    },
-    {
-      title: 'Site',
-      url: '/admin/site',
-      icon: 'business'
     },
     {
       title: 'Account',
