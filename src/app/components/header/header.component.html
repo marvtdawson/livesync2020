@@ -68,13 +68,13 @@
             </ion-button>
             <div *ngIf="dropdown" class="dropdown"
                  (mouseleave)="dropdown = false" #dropdownbox>
-                <ion-item button (click)="dropdown = false" [routerLink]="['/events']"
-                          [queryParams]="{ category: 'new'}"
+                <ion-item button (click)="dropdown = false" [routerLink]="['/new-events']"
+                          [queryParams]="{ category: 'events'}"
                           lines="none" routerDirection="root">
                     New
                 </ion-item>
-                <ion-item button (click)="dropdown = false" [routerLink]="['/events']"
-                          [queryParams]="{ category: 'previous'}"
+                <ion-item button (click)="dropdown = false" [routerLink]="['/previous-events']"
+                          [queryParams]="{ category: 'events'}"
                           lines="none" routerDirection="root">
                     Previous
                 </ion-item>

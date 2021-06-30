@@ -26,7 +26,17 @@ const routes: Routes = [
       },
       {
         path: 'events',
-        loadChildren: () => import('../events/events.module').then( m => m.EventsPageModule)
+        loadChildren: () => import('../events/events.module').then( m => m.EventsPageModule),
+        children: [
+          {
+            path: 'new-events',
+            loadChildren: () => import('../events/new-events/new-events.module').then( m => m.NewEventsPageModule)
+          },
+          {
+            path: 'previous-events',
+            loadChildren: () => import('../events/previous-events/previous-events.module').then( m => m.PreviousEventsPageModule)
+          }
+        ]
       },
       {
         path: 'performances',
