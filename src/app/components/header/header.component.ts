@@ -10,7 +10,7 @@ import {SiteDataService} from "../../../services/site-data/site-data.service";
 export class HeaderComponent implements OnInit {
 
   @Input()pageTitle: string;
-  dropdown = false;
+  dropdown = true;
   accountDropDown = false;
   appName = this.siteData.siteName;
   appLogo = this.siteData.siteLogo;

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import * as firebaseui from 'firebaseui';
-import firebase from 'firebase/app';
+// import firebase from 'firebase/app';
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {TermsOfServicePage} from "../terms-of-service/terms-of-service.page";
 import {PrivacyPage} from "../privacy/privacy.page";
 import {LocalStorageAuthService} from "../../../services/local-storage-auth/local-storage-auth.service";
+import firebase from "firebase";
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginPage implements OnInit {
   pageTitle = 'Login Page';
   constructor(private localStorageAuthService: LocalStorageAuthService,
               private http: HttpClient,
-              private router: Router,) { }
+              private router: Router) { }
 
   ui = new firebaseui.auth.AuthUI(firebase.auth());
 

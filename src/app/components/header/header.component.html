@@ -1,111 +1,117 @@
-<ion-header class="mobile-header ion-no-border" >
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button menu="myMenu"></ion-menu-button>
-    </ion-buttons>
-    <ion-title>{{ pageTitle }}</ion-title>
-    <ion-buttons>
-      <ion-button>
-        <a [routerLink]="['/home']">
-          <ion-img class="mobile-header__logo-img" [src]="appLogo"
-                   alt="Live Sync Logo">
-          </ion-img>
-        </a>
-      </ion-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-button>
-        <a [routerLink]="['/admin']" routerLinkActive="active-item" [routerLinkActiveOptions]="{exact: true}">
-          <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-        </a>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
+<ion-header class="mobile-header ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button menu="myMenu"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{ pageTitle }}</ion-title>
+        <ion-buttons>
+            <ion-button>
+                <a [routerLink]="['/home']">
+                    <ion-img class="mobile-header__logo-img" [src]="appLogo"
+                             alt="Live Sync Logo">
+                    </ion-img>
+                </a>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button>
+                <a [routerLink]="['/admin']" routerLinkActive="active-item" [routerLinkActiveOptions]="{exact: true}">
+                    <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+                </a>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
 
 <ion-row class="header">
-  <ion-col size="3">
-    <div class="header__logo-text-wrapper">
-      <ion-title>
-        <div class="header__logo-text-wrapper__logo">
-          <a [routerLink]="['/home']">
-            <ion-img [src]="appLogo"
-                     alt="Live Sync Logo">
-            </ion-img>
-          </a>
+    <ion-col size="3">
+        <div class="header__logo-text-wrapper">
+            <ion-title>
+                <div class="header__logo-text-wrapper__logo">
+                    <a [routerLink]="['/home']">
+                        <ion-img [src]="appLogo"
+                                 alt="Live Sync Logo">
+                        </ion-img>
+                    </a>
+                </div>
+
+                <div class="header__logo-text-wrapper__text">
+                    <a [routerLink]="['/home']">
+                        {{ appName | uppercase }}
+                    </a>
+                </div>
+
+            </ion-title>
         </div>
+    </ion-col>
 
-        <div class="header__logo-text-wrapper__text">
-          <a [routerLink]="['/home']">
-            {{ appName | uppercase }}
-          </a>
+    <ion-col size="2"></ion-col>
+    <ion-col size="7">
+        <div class="header__nav-wrapper">
+            <ion-button fill="clear" color="dark" [routerLink]="['/performances']"
+                        routerLinkActive="active-item"
+                        [routerLinkActiveOptions]="{exact: true}">Performances
+            </ion-button>
+            <ion-button fill="clear" color="dark" [routerLink]="['/features']"
+                        routerLinkActive="active-item"
+                        [routerLinkActiveOptions]="{exact: true}">Features
+            </ion-button>
+            <ion-button #eventsBtn (mouseenter)="dropdown=true" (mouseleave)="hideDropdown($event)"
+                        fill="clear" color="dark" class="dropdown-btn"
+                        [routerLink]="['/events']"
+                        routerDirection="root"
+                        routerLinkActive="active-item"
+                        [routerLinkActiveOptions]="{exact: true}">
+                Events
+                <ion-icon slot="end" [name]="dropdown ? 'chevron-down' : 'chevron-up'"></ion-icon>
+            </ion-button>
+            <div *ngIf="dropdown" class="dropdown"
+                 (mouseleave)="dropdown = false" #dropdownbox>
+                <ion-item button (click)="dropdown = false" [routerLink]="['/events']"
+                          [queryParams]="{ category: 'new'}"
+                          lines="none" routerDirection="root">
+                    New
+                </ion-item>
+                <ion-item button (click)="dropdown = false" [routerLink]="['/events']"
+                          [queryParams]="{ category: 'previous'}"
+                          lines="none" routerDirection="root">
+                    Previous
+                </ion-item>
+            </div>
+
+            <ion-button fill="clear" color="dark" [routerLink]="['/pricing']"
+                        routerLinkActive="active-item"
+                        [routerLinkActiveOptions]="{exact: true}">Pricing
+            </ion-button>
+            <ion-button fill="clear" color="dark" [routerLink]="['/cart']"
+                        routerLinkActive="active-item"
+                        [routerLinkActiveOptions]="{exact: true}">Cart
+            </ion-button>
+
+            <ion-button #accountBtn (mouseenter)="accountDropDown=true" (mouseleave)="hideDropdown($event)"
+                        fill="clear" color="dark" class="dropdown-btn"
+                        [routerLink]="['/admin']"
+                        routerDirection="root"
+                        routerLinkActive="active-item"
+                        [routerLinkActiveOptions]="{exact: true}">
+                Account
+                <ion-icon slot="end" [name]="accountDropDown ? 'chevron-down' : 'chevron-up'"></ion-icon>
+            </ion-button>
+            <div *ngIf="accountDropDown" class="account-dropdown"
+                 (mouseleave)="accountDropDown = false"
+                 #accountdropdownbox>
+                <ion-item button (click)="accountDropDown = false" [routerLink]="['/login']"
+                          [queryParams]="{ category: 'login'}"
+                          lines="none" routerDirection="root">
+                    Login
+                </ion-item>
+                <ion-item button (click)="accountDropDown = false" [routerLink]="['/logout']"
+                          [queryParams]="{ category: 'logout'}"
+                          lines="none" routerDirection="root">
+                    Logout
+                </ion-item>
+            </div>
         </div>
-
-      </ion-title>
-    </div>
-  </ion-col>
-
-  <ion-col size="2"></ion-col>
-  <ion-col size="7">
-    <div class="header__nav-wrapper">
-    <ion-button fill="clear" color="dark" [routerLink]="['/performances']"
-                routerLinkActive="active-item"
-      [routerLinkActiveOptions]="{exact: true}">Performances</ion-button>
-    <ion-button fill="clear" color="dark" [routerLink]="['/features']"
-                routerLinkActive="active-item"
-                [routerLinkActiveOptions]="{exact: true}">Features</ion-button>
-    <ion-button #eventsBtn (mouseenter)="dropdown=true" (mouseleave)="hideDropdown($event)"
-                fill="clear" color="dark" class="dropdown-btn"
-                [routerLink]="['/events']"
-                routerDirection="root"
-                routerLinkActive="active-item"
-                [routerLinkActiveOptions]="{exact: true}">
-      Events
-      <ion-icon slot="end" [name]="dropdown ? 'chevron-down' : 'chevron-up'"></ion-icon>
-    </ion-button>
-    <div *ngIf="dropdown" class="dropdown" (mouseleave)="dropdown = false" #dropdownbox >
-      <ion-item button (click)="dropdown = false" [routerLink]="['/events']"
-                [queryParams]="{ category: 'new'}"
-                lines="none" routerDirection="root" >
-        New
-      </ion-item>
-      <ion-item button (click)="dropdown = false" [routerLink]="['/events']"
-                [queryParams]="{ category: 'previous'}"
-                lines="none" routerDirection="root" >
-        Previous
-      </ion-item>
-    </div>
-
-    <ion-button fill="clear" color="dark" [routerLink]="['/pricing']"
-                routerLinkActive="active-item"
-                [routerLinkActiveOptions]="{exact: true}">Pricing</ion-button>
-    <ion-button fill="clear" color="dark" [routerLink]="['/cart']"
-                routerLinkActive="active-item"
-                [routerLinkActiveOptions]="{exact: true}">Cart</ion-button>
-
-    <ion-button fill="clear" color="dark" [routerLink]="['/admin']"
-                #accountBtn (mouseenter)="accountDropDown=true" (mouseleave)="hideDropdown($event)"
-                routerLinkActive="active-item"
-                routerDirection="root"
-                [routerLinkActiveOptions]="{exact: true}">
-      Account
-      <ion-icon slot="end" [name]="accountDropDown ? 'chevron-down' : 'chevron-up'"></ion-icon>
-    </ion-button>
-    <div *ngIf="accountDropDown" class="account-dropdown"
-         (mouseleave)="accountDropDown = false"
-         #accountdropdownbox >
-      <ion-item button (click)="accountDropDown = false" [routerLink]="['/login']"
-                [queryParams]="{ category: 'login'}"
-                lines="none" routerDirection="root" >
-        Login
-      </ion-item>
-      <ion-item button (click)="accountDropDown = false" [routerLink]="['/logout']"
-                [queryParams]="{ category: 'logout'}"
-                lines="none" routerDirection="root" >
-        Logout
-      </ion-item>
-    </div>
-    </div>
-  </ion-col>
+    </ion-col>
 </ion-row>
