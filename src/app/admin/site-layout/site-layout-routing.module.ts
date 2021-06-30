@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: SiteLayoutPage
+  },
+  {
+    path: 'edit-header',
+    loadChildren: () => import('./edit-header/edit-header.module').then( m => m.EditHeaderPageModule)
+  },
+  {
+    path: 'edit-footer',
+    loadChildren: () => import('./edit-footer/edit-footer.module').then( m => m.EditFooterPageModule)
   }
 ];
 
