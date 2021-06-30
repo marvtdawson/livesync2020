@@ -61,11 +61,16 @@ const routes: Routes = [
         loadChildren: () => import('./site/site.module').then( m => m.SitePageModule)
       },
       {
+        path: 'site-layout',
+        loadChildren: () => import('./site-layout/site-layout.module').then( m => m.SiteLayoutPageModule)
+      },
+      {
         path: 'account',
         loadChildren: () => import('./account/account.module').then( m => m.AccountPageModule)
       },
     ]
-  }
+  },
+
 ];
 
 @NgModule({

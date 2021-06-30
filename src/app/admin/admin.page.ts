@@ -37,6 +37,11 @@ export class AdminPage implements OnInit {
       icon: 'documents'
     },
     {
+      title: 'Site Layout',
+      url: '/admin/site-layout',
+      icon: 'layers'
+    },
+    {
       title: 'Payment Options',
       url: '/admin/payments',
       icon: 'card'
