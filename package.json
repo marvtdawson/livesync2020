@@ -68,7 +68,7 @@
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
   },
-  "description": "Live Sync App",
+  "description": "Mic Sync App",
   "cordova": {
     "plugins": {}
   }
