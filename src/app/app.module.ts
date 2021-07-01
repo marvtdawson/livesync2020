@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -11,6 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from "@angular/common/http";
 
 import { AngularFireModule} from '@angular/fire';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { FIREBASE_CONFIGED } from './app-firebase.config';
 
 @NgModule({
@@ -21,13 +24,17 @@ import { FIREBASE_CONFIGED } from './app-firebase.config';
     IonicModule.forRoot(),
     AngularFireModule,
     AngularFireModule.initializeApp(FIREBASE_CONFIGED),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
     HttpClientModule,
     AppRoutingModule ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    AngularFireAuth
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 })
 export class AppModule {}

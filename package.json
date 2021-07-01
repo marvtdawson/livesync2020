@@ -1,8 +1,9 @@
 {
-  "name": "livesync2020",
+  "name": "micsync2020",
   "version": "0.0.1",
   "author": "Marvin Dawson",
-  "homepage": "https://livesync.com/",
+  "homepage": "https://micsync.com/",
+  "description": "Mic Sync App",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -68,7 +69,6 @@
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
   },
-  "description": "Mic Sync App",
   "cordova": {
     "plugins": {}
   }

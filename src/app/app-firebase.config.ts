@@ -1,5 +1,4 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const FIREBASE_CONFIGED = {
+export const FIREBASE_CONFIGED = {
     apiKey: "AIzaSyBbSwI4LJS3UCh1HDIUqz6QERzCrUqKqnE",
     authDomain: "micsync-600ed.firebaseapp.com",
     projectId: "micsync-600ed",
