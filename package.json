@@ -15,6 +15,7 @@
   "dependencies": {
     "@angular/common": "~9.1.6",
     "@angular/core": "~9.1.6",
+    "@angular/fire": "^6.1.5",
     "@angular/forms": "~9.1.6",
     "@angular/platform-browser": "~9.1.6",
     "@angular/platform-browser-dynamic": "~9.1.6",
@@ -34,7 +35,7 @@
     "cordova-plugin-file": "^6.0.2",
     "cordova-plugin-media-capture": "^3.0.3",
     "firebase": "^8.6.8",
-    "firebase-admin": "^9.9.0",
+    "firebase-admin": "^9.10.0",
     "firebase-tools": "^8.2.0",
     "firebaseui": "^4.8.0",
     "rxjs": "~6.5.1",

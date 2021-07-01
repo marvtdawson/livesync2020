@@ -10,10 +10,19 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from "@angular/common/http";
 
+import { AngularFireModule} from '@angular/fire';
+import { FIREBASE_CONFIGED } from './app-firebase.config';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AngularFireModule,
+    AngularFireModule.initializeApp(FIREBASE_CONFIGED),
+    HttpClientModule,
+    AppRoutingModule ],
   providers: [
     StatusBar,
     SplashScreen,
