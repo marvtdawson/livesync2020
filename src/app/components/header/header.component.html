@@ -68,13 +68,12 @@
             </ion-button>
             <div *ngIf="dropdown" class="dropdown"
                  (mouseleave)="dropdown = false" #dropdownbox>
-                <ion-item button (click)="dropdown = false" [routerLink]="['/new-events']"
-                          [queryParams]="{ category: 'events'}"
+                <ion-item button (click)="dropdown = false" [routerLink]="['/events/new-events']"
+
                           lines="none" routerDirection="root">
                     New
                 </ion-item>
-                <ion-item button (click)="dropdown = false" [routerLink]="['/previous-events']"
-                          [queryParams]="{ category: 'events'}"
+                <ion-item button (click)="dropdown = false" [routerLink]="['/events/previous-events']"
                           lines="none" routerDirection="root">
                     Previous
                 </ion-item>
@@ -102,12 +101,10 @@
                  (mouseleave)="accountDropDown = false"
                  #accountdropdownbox>
                 <ion-item button (click)="accountDropDown = false" [routerLink]="['/login']"
-                          [queryParams]="{ category: 'login'}"
                           lines="none" routerDirection="root">
                     Login
                 </ion-item>
                 <ion-item button (click)="accountDropDown = false" [routerLink]="['/logout']"
-                          [queryParams]="{ category: 'logout'}"
                           lines="none" routerDirection="root">
                     Logout
                 </ion-item>
