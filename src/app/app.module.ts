@@ -10,6 +10,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from "@angular/common/http";
 
+import firebase from 'firebase';
+firebase.initializeApp(FIREBASE_CONFIGED);
+
 import { AngularFireModule} from '@angular/fire';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -22,8 +25,8 @@ import { FIREBASE_CONFIGED } from './app-firebase.config';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AngularFireModule,
     AngularFireModule.initializeApp(FIREBASE_CONFIGED),
+    AngularFireModule,
     AngularFirestoreModule,
     AngularFireDatabaseModule,
     HttpClientModule,
