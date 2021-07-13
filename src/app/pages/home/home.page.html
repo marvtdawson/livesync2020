@@ -1,9 +1,184 @@
 <ion-content>
-  <ion-card class="main-card">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Fluid jumbotron</h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+  <ion-card class="">
+    <ion-card-header>
+      <ion-card-title>Performances</ion-card-title>
+    </ion-card-header>
     <ion-card-content>
-      <ion-card-header>
-        <ion-card-title>{{ pageTitle }}</ion-card-title>
-      </ion-card-header>
+      <section class="how-we-help">
+        <ion-card-header>
+          <ion-card-subtitle class="section-headings">
+            <h1>How we help</h1>
+            <h5>Yeah we do those other things too!</h5>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card>
+          <ion-card-content class="how-we-help__content-wrapper">
+            <ion-col class="how-we-help__content-wrapper__col">
+              <i class="fas fa-tools fa-7x"></i>
+              <div>
+                <h3 class="how-we-help__content-wrapper__col__title">Customer Service</h3>
+                <p>Assign, track and confirm tenant's service requests.</p>
+              </div>
+            </ion-col>
+            <ion-col class="how-we-help__content-wrapper__col">
+              <i class="fas fa-comments fa-7x"></i>
+              <div>
+                <h3>Communicate</h3>
+                <p>Expedite office and tenant communications.</p>
+              </div>
+            </ion-col>
+            <ion-col class="how-we-help__content-wrapper__col">
+              <i class="fas fa-file-alt fa-7x"></i>
+              <div>
+                <h3>Application</h3>
+                <p>Register New Tenants Online</p>
+              </div>
+            </ion-col>
+          </ion-card-content>
+        </ion-card>
+      </section>
+
+      <section class="value-perception">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle class="section-headings">
+              <h1>Improve Customer Service Satisfaction Perception</h1>
+              <h5>VROM is the AFFORDABLE customer service infrastructure your rental property needs.</h5>
+            </ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content class="value-perception__content-wrapper">
+            <ion-col class="value-perception__content-wrapper__col-1">
+              <div>
+                <h2 class="heading-tertiary">
+                  Your tenant's perception of your rental property is PRICELE$$!
+                </h2>
+                <p class="paragraph">
+                  Increase customer service satisfaction,
+                  by monitoring how well your team respond & perform to a tenant's request.<br/><br/>
+                </p>
+                <p class="paragraph">
+                  Providing your tenants a higher level of customer service & new features builds
+                  perception.
+                </p>
+              </div>
+            </ion-col>
+            <ion-col class="value-perception__content-wrapper__col-2">
+              <div>
+                <ion-img [src]=""></ion-img>
+              </div>
+            </ion-col>
+          </ion-card-content>
+        </ion-card>
+      </section>
+
+      <section class="green-communication">
+        <ion-card-header>
+          <ion-card-subtitle class="section-headings">
+            <h1>Go <span class="green-text">GREEN</span> Send Notifications</h1>
+            <h5>Save <span class="green-text">trees</span> & communicate instantly</h5>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card>
+          <ion-card-content class="green-communication__content-wrapper">
+            <ion-row class="green-communication__content-wrapper__row-1">
+              <ion-col class="green-communication__content-wrapper__row-1__col-1 composition">
+                <img src="" alt="Photo 1"
+                     class="composition__photo composition__photo--p1 img-1">
+                <img src="" alt="Photo 2"
+                     class="composition__photo composition__photo--p2 img-2">
+                <img src="" alt="Photo 3"
+                     class="composition__photo composition__photo--p3 img-3">
+              </ion-col>
+              <ion-col class="green-communication_content-wrapper__row-1__col-2">
+                <div class="col-1-of-2">
+                  <h2 class="heading-tertiary u-margin-bottom-small">SAVE Money & Time</h2>
+                  <p class="paragraph">
+                    Who has time to print, cut and hand deliver notices?
+                    Do you even know if the notices actually got delivered?
+                  </p>
+                  <h3 class="heading-tertiary u-margin-bottom-small">Increase Customer Service Response
+                    Time</h3>
+                  <p class="paragraph">
+                    When they press send, you respond instantly.
+                  </p>
+                  <a href="#" class="btn-text">Learn More &rarr;</a>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </section>
+
+      <section class="founding-member">
+        <ion-card-header>
+          <ion-card-subtitle class="section-headings">
+            <h1>Become A Founding Member, Get Early Access</h1>
+            <h3>Join for FREE!</h3>
+            <h5>+Founding members receive special life-time pricing per location.</h5>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card>
+          <ion-card-content class="founding-member__content-wrapper">
+            <ion-col class="founding-member__content-wrapper__col-1">
+              <button class="btn founding-member__content-wrapper__col-1__btn">
+                Sign Up Now
+              </button>
+            </ion-col>
+          </ion-card-content>
+        </ion-card>
+      </section>
+
+      <section class="laundry">
+        <ion-card-header>
+          <ion-card-subtitle class="section-headings">
+            <h1>Laundry Portal</h1>
+            <h5>Managing The Seen & Unforeseen</h5>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card>
+          <ion-card-content class="features__content">
+            <p>
+              "This is where the features might go but for now I am just typing some text.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+              et
+              dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+              est
+              laborum."
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </section>
+
+      <section class="parking">
+        <ion-card-header>
+          <ion-card-subtitle class="section-headings">
+            <h1>Parking Portal</h1>
+            <h5>Partner With VROM and Increase Revenue</h5>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row class="services__text-wrapper">
+
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </section>
     </ion-card-content>
   </ion-card>
+  <app-footer></app-footer>
 </ion-content>
