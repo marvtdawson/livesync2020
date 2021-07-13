@@ -20,7 +20,7 @@ export class AppComponent {
       if(Capacitor.isPluginAvailable('SplashScreen')) {
         Plugins.SplashScreen.show(
             {
-              showDuration: 2000,
+              showDuration: 10000,
               autoHide: true
             }
         ).then();

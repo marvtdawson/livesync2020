@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VideoPlayer } from '@ionic-native/video-player/ngx';
+import {Platform} from "@ionic/angular";
 
 @Component({
   selector: 'app-home',
@@ -9,10 +10,16 @@ import { VideoPlayer } from '@ionic-native/video-player/ngx';
 export class HomePage implements OnInit {
 
   pageTitle = 'Home Page';
-  constructor(private videoPlayer: VideoPlayer) { }
+  constructor(private videoPlayer: VideoPlayer,
+              private platform: Platform) { }
 
   ngOnInit() {
     this.playLocalVideo();
+    console.log('Mobile: ' + this.platform.is('mobile'));
+    console.log('Desktop: ' + this.platform.is('desktop'));
+    console.log('Android: ' + this.platform.is('android'));
+    console.log('iOS: ' + this.platform.is('ios'));
+    console.log('Tablet: ' + this.platform.is('tablet'));
   }
 
   playLocalVideo() {
